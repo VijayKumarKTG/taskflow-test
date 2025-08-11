@@ -242,9 +242,15 @@ const Signup = () => {
 
         {/* Error display with animation */}
         {error && (
-          <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6 rounded animate-pulse" role="alert">
+          <div
+            className="bg-red-50 border-l-4 border-red-500 p-4 mb-6 rounded animate-pulse"
+            role="alert"
+          >
             <div className="flex items-center">
-              <FaExclamationCircle className="text-red-500 mr-2" aria-hidden="true" />
+              <FaExclamationCircle
+                className="text-red-500 mr-2"
+                aria-hidden="true"
+              />
               <p className="text-red-500 text-sm">{error}</p>
             </div>
           </div>
@@ -254,7 +260,12 @@ const Signup = () => {
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Full Name field */}
           <div>
-            <label htmlFor="fullName" className="block text-gray-700 text-sm font-medium mb-1">Full Name</label>
+            <label
+              htmlFor="fullName"
+              className="block text-gray-700 text-sm font-medium mb-1"
+            >
+              Full Name
+            </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <FaUser className="text-gray-400" aria-hidden="true" />
@@ -276,7 +287,12 @@ const Signup = () => {
 
           {/* Email field */}
           <div>
-            <label htmlFor="email" className="block text-gray-700 text-sm font-medium mb-1">Email</label>
+            <label
+              htmlFor="email"
+              className="block text-gray-700 text-sm font-medium mb-1"
+            >
+              Email
+            </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <FaEnvelope className="text-gray-400" aria-hidden="true" />
@@ -298,7 +314,12 @@ const Signup = () => {
 
           {/* Password field */}
           <div>
-            <label htmlFor="password" className="block text-gray-700 text-sm font-medium mb-1">Password</label>
+            <label
+              htmlFor="password"
+              className="block text-gray-700 text-sm font-medium mb-1"
+            >
+              Password
+            </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <FaLock className="text-gray-400" aria-hidden="true" />
@@ -316,25 +337,35 @@ const Signup = () => {
                 autoComplete="new-password"
               />
             </div>
-            
+
             {/* Password strength indicator */}
             {formData.password && (
               <div className="mt-1 flex items-center">
                 <div className="w-full bg-gray-200 rounded-full h-2 mr-2">
-                  <div 
+                  <div
                     className={`h-2 rounded-full ${
-                      passwordStrength.color === "red" ? "bg-red-500" : 
-                      passwordStrength.color === "yellow" ? "bg-yellow-500" : 
-                      passwordStrength.color === "green" ? "bg-green-500" : "bg-gray-300"
+                      passwordStrength.color === "red"
+                        ? "bg-red-500"
+                        : passwordStrength.color === "yellow"
+                          ? "bg-yellow-500"
+                          : passwordStrength.color === "green"
+                            ? "bg-green-500"
+                            : "bg-gray-300"
                     }`}
                     style={{ width: `${(passwordStrength.score / 5) * 100}%` }}
                   ></div>
                 </div>
-                <span className={`text-xs ${
-                  passwordStrength.color === "red" ? "text-red-500" : 
-                  passwordStrength.color === "yellow" ? "text-yellow-600" : 
-                  passwordStrength.color === "green" ? "text-green-500" : "text-gray-500"
-                }`}>
+                <span
+                  className={`text-xs ${
+                    passwordStrength.color === "red"
+                      ? "text-red-500"
+                      : passwordStrength.color === "yellow"
+                        ? "text-yellow-600"
+                        : passwordStrength.color === "green"
+                          ? "text-green-500"
+                          : "text-gray-500"
+                  }`}
+                >
                   {passwordStrength.message}
                 </span>
               </div>
@@ -343,7 +374,12 @@ const Signup = () => {
 
           {/* Confirm Password field */}
           <div>
-            <label htmlFor="confirmPassword" className="block text-gray-700 text-sm font-medium mb-1">Confirm Password</label>
+            <label
+              htmlFor="confirmPassword"
+              className="block text-gray-700 text-sm font-medium mb-1"
+            >
+              Confirm Password
+            </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <FaLock className="text-gray-400" aria-hidden="true" />
@@ -361,15 +397,19 @@ const Signup = () => {
                 autoComplete="new-password"
               />
             </div>
-            
+
             {/* Password match indicator */}
             {formData.password && formData.confirmPassword && (
-              <p className={`text-xs mt-1 ${
-                formData.password === formData.confirmPassword ? "text-green-500" : "text-red-500"
-              }`}>
-                {formData.password === formData.confirmPassword ? 
-                  "Passwords match" : 
-                  "Passwords do not match"}
+              <p
+                className={`text-xs mt-1 ${
+                  formData.password === formData.confirmPassword
+                    ? "text-green-500"
+                    : "text-red-500"
+                }`}
+              >
+                {formData.password === formData.confirmPassword
+                  ? "Passwords match"
+                  : "Passwords do not match"}
               </p>
             )}
           </div>
@@ -398,7 +438,9 @@ const Signup = () => {
 
         {/* Additional links */}
         <div className="text-center mt-4">
-          <span className="text-gray-600 text-sm">Already have an account? </span>
+          <span className="text-gray-600 text-sm">
+            Already have an account?{" "}
+          </span>
           <Link
             to="/login"
             state={{ role }}
@@ -408,7 +450,7 @@ const Signup = () => {
           </Link>
           <div className="mt-2">
             <Link
-              to="/"
+              to="/landing"
               className="text-gray-500 text-sm hover:underline"
             >
               Back to Home

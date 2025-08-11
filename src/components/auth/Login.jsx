@@ -136,9 +136,15 @@ const Login = () => {
 
         {/* Error display with animation */}
         {error && (
-          <div className="bg-red-50 border-l-4 border-red-500 p-4 mb-6 rounded animate-pulse" role="alert">
+          <div
+            className="bg-red-50 border-l-4 border-red-500 p-4 mb-6 rounded animate-pulse"
+            role="alert"
+          >
             <div className="flex items-center">
-              <FaExclamationCircle className="text-red-500 mr-2" aria-hidden="true" />
+              <FaExclamationCircle
+                className="text-red-500 mr-2"
+                aria-hidden="true"
+              />
               <p className="text-red-500 text-sm">{error}</p>
             </div>
           </div>
@@ -148,7 +154,12 @@ const Login = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Email field */}
           <div>
-            <label htmlFor="email" className="block text-gray-700 text-sm font-medium mb-1">Email</label>
+            <label
+              htmlFor="email"
+              className="block text-gray-700 text-sm font-medium mb-1"
+            >
+              Email
+            </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <FaEnvelope className="text-gray-400" aria-hidden="true" />
@@ -169,7 +180,12 @@ const Login = () => {
 
           {/* Password field */}
           <div>
-            <label htmlFor="password" className="block text-gray-700 text-sm font-medium mb-1">Password</label>
+            <label
+              htmlFor="password"
+              className="block text-gray-700 text-sm font-medium mb-1"
+            >
+              Password
+            </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                 <FaLock className="text-gray-400" aria-hidden="true" />
@@ -221,7 +237,9 @@ const Login = () => {
             </span>
           </div>
           <div>
-            <span className="text-gray-600 text-sm">Don't have an account? </span>
+            <span className="text-gray-600 text-sm">
+              Don't have an account?{" "}
+            </span>
             <Link
               to="/signup"
               state={{ role }}
@@ -232,7 +250,7 @@ const Login = () => {
           </div>
           <div>
             <Link
-              to="/"
+              to="/landing"
               className="text-gray-500 text-sm hover:underline"
             >
               Back to Home

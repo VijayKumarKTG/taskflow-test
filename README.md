@@ -19,7 +19,7 @@ This project is an implementation of the TaskFlow test, a MERN stack task manage
 ## Test Problems
 1. **Complete the tasks**:
 
-△ Task 1 - Display Login/Register page before the landing page
+△ Task 1 - Display Login/Register page before the landing page ✅
 - Users are should to login first to access the full list of tabs.
 - When they're logged out, only Dashboard panel should to be displayed.
 
