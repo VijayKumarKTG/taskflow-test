@@ -23,7 +23,7 @@ This project is an implementation of the TaskFlow test, a MERN stack task manage
 - Users are should to login first to access the full list of tabs.
 - When they're logged out, only Dashboard panel should to be displayed.
 
-△ Task 2 - Task Filter
+△ Task 2 - Task Filter ✅
 - Allow users to filter tasks based on their completion status (e.g., show only completed or incomplete tasks).
 - Optional: Add a search feature to filter tasks by title.
 
