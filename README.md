@@ -27,7 +27,7 @@ This project is an implementation of the TaskFlow test, a MERN stack task manage
 - Allow users to filter tasks based on their completion status (e.g., show only completed or incomplete tasks).
 - Optional: Add a search feature to filter tasks by title.
 
-△ Task 3 - Add User Log page on the Admin page
+△ Task 3 - Add User Log page on the Admin page ✅
 - Display the user logs(login time, logout time, JWT token name, user name, role, ip address)
 - The user logs could be deleted by admin action - DELETE
 
